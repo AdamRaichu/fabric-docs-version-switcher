@@ -1,0 +1,37 @@
+{
+  "manifest_version": 3,
+  "name": "Fabric API Docs Version Switcher",
+  "description": "An extension which ensures the documentation you are looking at is for the version you are working on",
+  "version": "1.0.0",
+  "permissions": [
+    "scripting",
+    "storage"
+  ],
+  "action": {
+    "default_icon": {
+      "128": "./icons/128.png"
+    },
+    "default_popup": "./popup/index.html"
+  },
+  "icons": {
+    "128": "./icons/128.png"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://maven.fabricmc.net/docs/fabric-api-*"
+      ],
+      "js": [
+        "./scripts/fabric-api-version-switch.js"
+      ]
+    },
+    {
+      "matches": [
+        "https://maven.fabricmc.net/docs/*"
+      ],
+      "css": [
+        "./styles/fabric-docs-table-overflow.css"
+      ]
+    }
+  ]
+}
