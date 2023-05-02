@@ -2,7 +2,7 @@
   "manifest_version": 3,
   "name": "Fabric API Docs Version Switcher",
   "description": "An extension which ensures the documentation you are looking at is for the version you are working on",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "permissions": [
     "scripting",
     "storage"
@@ -31,6 +31,14 @@
       ],
       "css": [
         "./styles/fabric-docs-table-overflow.css"
+      ]
+    },
+    {
+      "matches": [
+        "https://maven.fabricmc.net/docs/yarn-*"
+      ],
+      "js": [
+        "./scripts/fabric-yarn-version-switch.js"
       ]
     }
   ]
